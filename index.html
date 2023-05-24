@@ -5,6 +5,7 @@
   <script>
     let ws;
     const proto = window.location.protocol === "https:" ? "wss" : "ws";
+    console.log("proto: ", proto);
     ws = new WebSocket(`${proto}://${window.location.host}/ws`);
 
     ws.onmessage = (event) => {
